@@ -7,12 +7,12 @@ function router(req, res) {
     console.log(req.url);
 
     switch (req.url) {
-        case '/hola':
-            res.write('Hola que tal');
-            res.end();
+        case '/':
+            // res.write('<h1>Hola</h1>');
+            res.end('<h1>Hola</h1>');
             break
         default:
-            res.write('Error 404');
+            res.write('Error 404: Url not found');
             res.end();
     }
 
